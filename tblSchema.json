@@ -16,9 +16,19 @@
           "columntype": {
             "type": "string"
           },
-          "maxlenght":{ "type":"integer"},
-           "minlength":{"type":"integer"},
-          "default":{"type":"string"}
+          "maxlength": {
+            "type": "integer"
+          },
+          "minlength": {
+            "type": "integer"
+          },
+          "default": {
+            "type": "string"
+          },
+          "scale": {
+            "type": "integer",
+            "default": 0
+          }
         }
       }
     }
