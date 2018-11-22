@@ -9,28 +9,25 @@
       "title": "type of table"
     },
     "columns": {
-      "type": "object",
+      "type": "array",
       "title": "list of columns of the table",
-      "patternProperties": {
-        "[a-zA-z]+": {
-          "columntype": {
-            "type": "string"
+      "items": {
+      	"type":"object",
+        "properties":{
+          "name":{
+            "type":"string"
           },
-          "maxlength": {
-            "type": "integer"
-          },
-          "minlength": {
-            "type": "integer"
-          },
-          "default": {
-            "type": "string"
-          },
-          "scale": {
-            "type": "integer",
-            "default": 0
+          "varchar":{
+            "type":"object"
           }
         }
       }
+    }
+  },
+  "definitions":{
+    "varchar":{
+    },
+    "date":{
     }
   }
 }
