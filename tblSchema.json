@@ -12,22 +12,76 @@
       "type": "array",
       "title": "list of columns of the table",
       "items": {
-      	"type":"object",
-        "properties":{
-          "name":{
-            "type":"string"
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
           },
-          "varchar":{
-            "type":"object"
+          "varchar": {
+            "type": "object"
           }
         }
       }
     }
   },
-  "definitions":{
-    "varchar":{
+  "definitions": {
+    "varchar": {
+      "type": "object",
+      "properties": {
+        "maxlength": {
+          "type": "numeric"
+        },
+        "minlength": {
+          "type": "numeric"
+        },
+        "validation": {
+          "type": "string"
+        }
+      }
     },
-    "date":{
-    }
+    "date": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        }
+      }
+    },
+    "numeric": {
+      "type": "object",
+      "properties": {
+        "precision": {
+          "type": "numeric"
+        },
+        "scale": {
+          "type": "numeric"
+        },
+        "validation": {
+          "type": "string"
+        },
+        "maxvalue": {
+          "type": "string"
+        },
+        "minvalue": {
+          "type": "string"
+        }
+      }
+    },
+    "text": {
+      "type": "object",
+      "properties": {
+        "maxlength": {
+          "type": "numeric"
+        },
+        "languages": {
+          "type": "string"
+        }
+      }
+    },
+    "xml": {},
+    "json": {}
   }
 }
