@@ -13,14 +13,28 @@
       "title": "list of columns of the table",
       "items": {
         "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
+        "anyOf": [
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "varchar": {
+                "$ref": "#/definitions/varchar"
+              }
+            }
           },
-          "varchar": {
-            "type": "object"
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "numeric": {
+                "$ref": "#/definitions/decimal"
+              }
+            }
           }
-        }
+        ]
       }
     }
   },
@@ -29,10 +43,10 @@
       "type": "object",
       "properties": {
         "maxlength": {
-          "type": "numeric"
+          "type": "number"
         },
         "minlength": {
-          "type": "numeric"
+          "type": "number"
         },
         "validation": {
           "type": "string"
@@ -50,23 +64,23 @@
         }
       }
     },
-    "numeric": {
+    "decimal": {
       "type": "object",
       "properties": {
         "precision": {
-          "type": "numeric"
+          "type": "integer"
         },
         "scale": {
-          "type": "numeric"
+          "type": "integer"
         },
         "validation": {
           "type": "string"
         },
         "maxvalue": {
-          "type": "string"
+          "type": "integer"
         },
         "minvalue": {
-          "type": "string"
+          "type": "integer"
         }
       }
     },
