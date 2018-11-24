@@ -35,6 +35,28 @@
               }
             },
             "additionalProperties": false
+          },
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "date": {
+                "$ref": "#/definitions/date"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "text": {
+                "$ref": "#/definitions/text"
+              }
+            },
+            "additionalProperties": false
           }
         ]
       }
@@ -85,6 +107,9 @@
         },
         "minvalue": {
           "type": "integer"
+        },
+        "validation":{
+          "type":"string"
         }
       },
       "additionalProperties": false
@@ -93,7 +118,7 @@
       "type": "object",
       "properties": {
         "maxlength": {
-          "type": "numeric"
+          "type": "integer"
         },
         "languages": {
           "type": "string"
