@@ -1,0 +1,129 @@
+ {
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://www.goralsoft.com/UILayout.json",
+  "type": "object",
+  "title": "ui layout schema",
+  "properties": {
+    "type": {
+      "type": "string",
+      "title": "type of ui layout"
+    },
+    "columns": {
+      "type": "array",
+      "title": "list of controls for the screen",
+      "items": {
+        "type": "object",
+        "anyOf": [
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "varchar": {
+                "$ref": "#/definitions/textbox"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "numeric": {
+                "$ref": "#/definitions/label"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "date": {
+                "$ref": "#/definitions/dropdown"
+              }
+            },
+            "additionalProperties": false
+          },
+          {
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "text": {
+                "$ref": "#/definitions/radio"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "textbox": {
+      "type": "object",
+      "properties": {
+        "maxlength": {
+          "type": "number"
+        },
+        "minlength": {
+          "type": "number"
+        },
+        "validation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "label": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dropdown": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "integer"
+        },
+        "validation": {
+          "type": "string"
+        },
+        "multiple": {
+          "type": "boolean"
+        },
+        "visible-count": {
+          "type": "integer"
+        }
+      },
+      "additionalProperties": false
+    },
+    "radio": {
+      "type": "object",
+      "properties": {
+        "maxlength": {
+          "type": "integer"
+        },
+        "languages": {
+          "type": "string"
+        },
+        "additionalProperties": false
+      }
+    },
+    "button": {},
+    "json": {}
+  }
+}
