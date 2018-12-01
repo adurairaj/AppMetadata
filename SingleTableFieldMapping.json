@@ -1,0 +1,12 @@
+{
+  "$id": "https://example.com/single.table.mapping.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Single table ui field mapping",
+  "type":"object",
+  "properties":{
+    "table":{ "type":"string", "description":"table name"},
+    "columns":{
+    "type":"array",
+    "description":"list columns ui field mapping"
+  }
+  }
