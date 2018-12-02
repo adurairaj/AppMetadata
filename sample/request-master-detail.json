@@ -1,0 +1,10 @@
+{
+  "master": [
+    "regno",
+    "experiod"
+  ],
+  "detail": [
+    "paperid",
+    "batch"
+  ]
+}
